@@ -1,0 +1,21 @@
+{
+    "name": "runner/web-scrapper",
+    "description": "allows fetch web site data",
+    "autoload": {
+        "psr-4": {
+          "App\\": "app"
+   
+         
+        }
+    },
+    "authors": [
+        {
+            "name": "Farid Makhmudov",
+            "email": "11527472-FaridMahmudov1@users.noreply.replit.com"
+        }
+    ],
+    "require": {
+      "ext-libxml": "*",
+      "ext-dom": "*"
+    }
+}
