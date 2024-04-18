@@ -20,7 +20,7 @@
                 >
             </div>
 
-            <button type="submit" class="btn btn-primary">Скачать</button>
+            <button x-text="status" type="submit" class="btn btn-primary"></button>
         </form>
 
     </div>

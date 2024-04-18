@@ -1,11 +1,14 @@
 document.addEventListener('alpine:init', () => {
     Alpine.data('data', () => ({
         url: '',
+        status: 'Парсить',
+
+      
         async parseRequest() {
             if (!this.checkUrlField()) {
                 return;
             }
-
+            this.status = "Парсинг..."
             const response = await fetch('index.php?page=home&action=create', {
                 method: 'POST',
                 body: new FormData(document.querySelector('#parser-form'))
@@ -13,6 +16,7 @@ document.addEventListener('alpine:init', () => {
             const res = await response.json()
             if(res){
                 console.log(res)
+               this.status = "Парсить"
                 const timer = setTimeout(() => {
                         window.location.reload()
                     clearTimeout(timer)
